@@ -79,7 +79,6 @@ public class FlightController {
 	@PostMapping("/addSchedule")
 	public ApiResponse getSchedule(@RequestBody FlightCommonDetail data) {
 		Optional<FlightAirBus> fABus = airBusrepo.findByFlightId(data.getFlightId());
-
 		ApiResponse apiResponse;
 		if (fABus.isPresent()) {
 			ScheduleTime ScTime = new ScheduleTime();
